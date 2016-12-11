@@ -25,7 +25,7 @@ import org.apache.commons.fileupload.servlet.ServletFileUpload;
 import com.nc.processors.DataProcessorImpl;
 
 @WebServlet("/Process")
-public class ProcessServlet extends HttpServlet {
+public class Process extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	private ServletFileUpload uploader = null;
 
