@@ -2,12 +2,16 @@
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+</head>
 <body>
 <form action="ProcessServlet" method="post" enctype="multipart/form-data">
-
+<h3><b><i>Upload any txt file</i></b></h3>
 <br> <br>  <br> 
-Select File to Upload:<input type="file" name="fileName" >
+Select File to Upload:<input type="file" name="fileName" accept="text">
 <br>  
 <input type="submit" value="Upload">
 <br> <br>  <br>  
