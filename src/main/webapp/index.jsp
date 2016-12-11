@@ -1,6 +1,7 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <body>
 <form action="ProcessServlet" method="post" enctype="multipart/form-data">
@@ -13,8 +14,16 @@ Select File to Upload:<input type="file" name="fileName" >
 
 <b>Duplicate Count: </b> ${requestScope.duplicates}<br> 
 <b>Unique groups: </b> ${requestScope.unique}<br> 
-<b>Frequent Group: </b> ${requestScope.frequent}<br> 
-<b>Invalid Groups: </b> ${requestScope.invalid}<br> 
+<%int k=0;%>
+<b>Frequent Group:</b> 
+<%List<String> s=(ArrayList)request.getAttribute("frequent");
+ if(s!=null){ for(int i=0;i<s.size();i++){ %> <b><%=i+1 %>)</b><%out.print(" "+s.get(i)+" ");}}%>
+ <br>
+<b>Invalid Groups: </b> 
+<%List<String> s1=(ArrayList)request.getAttribute("invalid");
+if(s1!=null){ for(k=0;k<s1.size();k++){ %> <b><%=k+1 %>)</b><%out.print(" "+s1.get(k)+" ");}}%>
+
+
 </form>
 </body>
 </html>
