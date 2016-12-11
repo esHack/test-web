@@ -8,7 +8,7 @@ pageEncoding="ISO-8859-1"%>
 <meta charset="utf-8"/>
 </head>
 <body>
-<form action="ProcessServlet" method="post" enctype="multipart/form-data">
+<form action="Process" method="post" enctype="multipart/form-data">
 <h3><b><i>Upload any txt file</i></b></h3>
 <br> <br>  <br> 
 Select File to Upload:<input type="file" name="fileName" accept="text">
