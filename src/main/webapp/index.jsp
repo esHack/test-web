@@ -12,8 +12,8 @@ pageEncoding="ISO-8859-1"%>
 <h3><b><i>Upload any txt file</i></b></h3>
 <br> <br>  <br> 
 Select File to Upload:<input type="file" name="fileName" accept="text">
-<br>  
-<input type="submit" value="Upload">
+<br>  <br>  
+<input type="submit" value="Process">
 <br> <br>  <br>  
 
 <b>Duplicate Count: </b> ${requestScope.duplicates}<br> 
